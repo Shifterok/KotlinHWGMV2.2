@@ -1,9 +1,14 @@
-
-fun main(){
+fun main() {
     println("Укажите сколько лайков?")
     val likes = readLine()!!.toInt()
-    if (likes % 2 == 0) {
-        println("Людям")
-    } else println("Человеку")
+    val firstNumber = likes - 1
+    val secondNumber = likes - 11
 
+    fun checkOut() {
+        if (firstNumber % 10 == 0 || secondNumber % 10 == 0) println("Понравилось $likes человеку")
+        else println("Понравилось $likes люядм")
+    }
+    checkOut()
+
+    println("Как то так =) ")
 }
